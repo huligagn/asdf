@@ -1,3 +1,4 @@
 checkpoint
 *.ckpt*
 .idea
+*.pyc
