@@ -7,7 +7,7 @@ N_STATES = 6                    # 状态的个数
 ACTIONS = ['left', 'right']     # 所有选择
 EPSILON = 0.9                   # epsilon-greedy的超参，0.9的概率按价值选择，0.1的概率随机选择
 ALPHA = 0.1                     # 学习率
-GAMMA = 0.9                     # 潜在影响因子，下一步对当前选择的影响银子
+GAMMA = 0.9                     # 潜在影响因子，下一步对当前选择的影响因子
 MAX_EPISODES = 13               # 迭代次数
 FRESH_TIME = 0.3                # UI 刷新时间
 
