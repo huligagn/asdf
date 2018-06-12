@@ -2,7 +2,7 @@ from maze_env import Maze
 from RL_brain import SarsaTable
 
 def update():
-    for episode in range(100):
+    for _ in range(100):
         observation = env.reset()
 
         action = RL.choose_action(str(observation))
