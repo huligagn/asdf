@@ -3,3 +3,4 @@ checkpoint
 .idea
 *.pyc
 *.ipynb_checkpoints
+logs/
