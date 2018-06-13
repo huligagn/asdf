@@ -4,7 +4,7 @@ from RL_brain import DeepQNetwork
 
 def run_maze():
     step = 0
-    for episode in range(300):
+    for _ in range(300):
         observation = env.reset()
 
         while True:
@@ -13,9 +13,9 @@ def run_maze():
             action = RL.choose_action(observation)
             observation_, reward, done = env.step(action)
 
-            RL.store_transition(observation, action, reward, observation_)
+            RL.store_transition(observation, action, reward, observation_)  # 存储
 
-            if (step > 200) and (step % 5 == 0):
+            if (step > 200) and (step % 5 == 0):                            # 更新参数
                 RL.learn()
 
             observation = observation_
@@ -36,7 +36,8 @@ if __name__ == '__main__':
                       reward_decay=0.9,
                       e_greedy=0.9,
                       replace_target_iter=200,
-                      memory_size=2000)
+                      memory_size=2000,
+                      output_graph=True)
     env.after(100, run_maze)
     env.mainloop()
     RL.plot_cost()
